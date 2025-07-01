@@ -1,5 +1,5 @@
 robotframework
 robotframework-seleniumlibrary
 robotframework-faker
-String    
-Collections 
+robotframework-String    
+robotframework-Collections 
