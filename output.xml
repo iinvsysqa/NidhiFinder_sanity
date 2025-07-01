@@ -1,0 +1,2234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.13.2 on win32)" generated="2025-06-30T22:53:53.733005" rpa="false" schemaversion="5">
+<suite id="s1" name="Testcases" source="C:\Users\Invcuser_71\Desktop\Python_Maghavitta_automation\NidhiFinder_sanity\Testcases">
+<suite id="s1-s1" name="EMIpage" source="C:\Users\Invcuser_71\Desktop\Python_Maghavitta_automation\NidhiFinder_sanity\Testcases\EMIpage.robot">
+<test id="s1-s1-t1" name="Test Loan Calculator Flow" line="115">
+<kw name="Setup Browser" owner="check_EMI_Calculator">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:53:54.181972" level="INFO">Opening browser 'chrome' to base url 'https://nidhifinder.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-30T22:53:54.181784" elapsed="2.970392"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-30T22:53:57.152368" elapsed="0.185151"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-06-30T22:53:57.337701" elapsed="0.001630"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-06-30T22:53:57.339525" elapsed="0.000223"/>
+</kw>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2025-06-30T22:53:54.180836" elapsed="3.159012"/>
+</kw>
+<kw name="Enter Loan Amount">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOAN_AMOUNT_INPUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:53:57.340925" elapsed="1.037462"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:53:58.897635" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="1424c010c9a4edde5d824835b123a7f3", element="f.8902C5831442508D7DF5B8C48CB64CCA.d.17388276CAB9700FFFC423AB52FA5B99.e.3")&gt;</msg>
+<var>${element}</var>
+<arg>${LOAN_AMOUNT_INPUT}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:53:58.379175" elapsed="0.518602"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:53:58.900118" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="1424c010c9a4edde5d824835b123a7f3", element="f.8902C5831442508D7DF5B8C48CB64CCA.d.17388276CAB9700FFFC423AB52FA5B99.e.3")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:53:58.899122" elapsed="0.508950"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:53:59.909592" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:53:59.408593" elapsed="0.501270"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:53:58.898292" elapsed="1.011864"/>
+</kw>
+<kw name="Enter Value" owner="check_EMI_Calculator">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:53:59.911861" elapsed="0.521137"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:00.435414" level="INFO">Executing JavaScript:
+arguments[0].value = '';
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="1424c010c9a4edde5d824835b123a7f3", element="f.8902C5831442508D7DF5B8C48CB64CCA.d.17388276CAB9700FFFC423AB52FA5B99.e.3")&gt;'</msg>
+<arg>arguments[0].value = '';</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:54:00.433820" elapsed="0.518027"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:00.953017" level="INFO">Typing text '100000' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="1424c010c9a4edde5d824835b123a7f3", element="f.8902C5831442508D7DF5B8C48CB64CCA.d.17388276CAB9700FFFC423AB52FA5B99.e.3")&gt;'.</msg>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:00.952381" elapsed="1.131710"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-30T22:54:02.086214" level="INFO">Entered value '100000' in field 'Loan Amount'</msg>
+<arg>Entered value '${value}' in field '${fieldname}'</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-30T22:54:02.085047" elapsed="0.001516"/>
+</kw>
+<arg>${element}</arg>
+<arg>Loan Amount</arg>
+<arg>${amount}</arg>
+<status status="PASS" start="2025-06-30T22:53:59.910646" elapsed="2.176244"/>
+</kw>
+<arg>${LOAN_AMOUNT}</arg>
+<status status="PASS" start="2025-06-30T22:53:57.340508" elapsed="4.746624"/>
+</kw>
+<kw name="Change Tenure">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${YEAR_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:54:02.089623" elapsed="1.058083"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:03.664227" level="INFO">${yearBtn} = &lt;selenium.webdriver.remote.webelement.WebElement (session="1424c010c9a4edde5d824835b123a7f3", element="f.8902C5831442508D7DF5B8C48CB64CCA.d.17388276CAB9700FFFC423AB52FA5B99.e.30")&gt;</msg>
+<var>${yearBtn}</var>
+<arg>${YEAR_BUTTON}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:03.148168" elapsed="0.516215"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:04.193103" level="INFO">${sliderTrack} = &lt;selenium.webdriver.remote.webelement.WebElement (session="1424c010c9a4edde5d824835b123a7f3", element="f.8902C5831442508D7DF5B8C48CB64CCA.d.17388276CAB9700FFFC423AB52FA5B99.e.31")&gt;</msg>
+<var>${sliderTrack}</var>
+<arg>${TENURE_TRACK}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:03.665116" elapsed="0.528138"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:04.716312" level="INFO">${sliderThumb} = &lt;selenium.webdriver.remote.webelement.WebElement (session="1424c010c9a4edde5d824835b123a7f3", element="f.8902C5831442508D7DF5B8C48CB64CCA.d.17388276CAB9700FFFC423AB52FA5B99.e.32")&gt;</msg>
+<var>${sliderThumb}</var>
+<arg>${TENURE_THUMB}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:04.193859" elapsed="0.522572"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:05.239791" level="INFO">${label} = &lt;selenium.webdriver.remote.webelement.WebElement (session="1424c010c9a4edde5d824835b123a7f3", element="f.8902C5831442508D7DF5B8C48CB64CCA.d.17388276CAB9700FFFC423AB52FA5B99.e.33")&gt;</msg>
+<var>${label}</var>
+<arg>${TENURE_LABEL}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:04.717008" elapsed="0.522891"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:05.242171" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="1424c010c9a4edde5d824835b123a7f3", element="f.8902C5831442508D7DF5B8C48CB64CCA.d.17388276CAB9700FFFC423AB52FA5B99.e.30")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:54:05.241004" elapsed="0.515166"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:54:06.257610" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:54:05.756568" elapsed="0.501183"/>
+</kw>
+<arg>${yearBtn}</arg>
+<status status="PASS" start="2025-06-30T22:54:05.240367" elapsed="1.017588"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:06.258792" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="1424c010c9a4edde5d824835b123a7f3", element="f.8902C5831442508D7DF5B8C48CB64CCA.d.17388276CAB9700FFFC423AB52FA5B99.e.30")&gt;'.</msg>
+<arg>${yearBtn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:06.258282" elapsed="0.581667"/>
+</kw>
+<kw name="Set Slider To Value" owner="check_EMI_Calculator">
+<kw name="Convert To Number" owner="BuiltIn">
+<msg time="2025-06-30T22:54:06.842013" level="INFO">${target} = 10.0</msg>
+<var>${target}</var>
+<arg>${target_value}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" start="2025-06-30T22:54:06.841575" elapsed="0.000484"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:07.383732" level="INFO">${current_text} = 1</msg>
+<var>${current_text}</var>
+<arg>${label}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:06.842213" elapsed="0.541658"/>
+</kw>
+<kw name="Remove String" owner="String">
+<msg time="2025-06-30T22:54:07.385633" level="INFO">${current_text} = 1</msg>
+<var>${current_text}</var>
+<arg>${current_text}</arg>
+<arg>%</arg>
+<arg>${SPACE}</arg>
+<arg>,</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<status status="PASS" start="2025-06-30T22:54:07.384869" elapsed="0.000824"/>
+</kw>
+<kw name="Strip String" owner="String">
+<msg time="2025-06-30T22:54:07.386284" level="INFO">${current_text} = 1</msg>
+<var>${current_text}</var>
+<arg>${current_text}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-06-30T22:54:07.385923" elapsed="0.000422"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Convert To Number" owner="BuiltIn">
+<arg>${current_text}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" start="2025-06-30T22:54:07.388361" elapsed="0.000348"/>
+</kw>
+<msg time="2025-06-30T22:54:07.388914" level="INFO">${current_value} = 1.0</msg>
+<var>${current_value}</var>
+<arg>'${current_text}' != '${EMPTY}'</arg>
+<arg>Convert To Number</arg>
+<arg>${current_text}</arg>
+<arg>ELSE</arg>
+<arg>Set Variable</arg>
+<arg>${min_val}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-30T22:54:07.386605" elapsed="0.002369"/>
+</kw>
+<kw name="Get Element Size" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:08.416933" level="INFO">${track_size} = (664, 34)</msg>
+<var>${track_size}</var>
+<arg>${slider_track}</arg>
+<doc>Returns width and height of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:07.389276" elapsed="1.027773"/>
+</kw>
+<kw name="Get Element Size" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:09.438710" level="INFO">${thumb_size} = (25, 25)</msg>
+<var>${thumb_size}</var>
+<arg>${slider_thumb}</arg>
+<doc>Returns width and height of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:08.417442" elapsed="1.021378"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-30T22:54:09.441100" level="INFO">${track_width} = 664</msg>
+<var>${track_width}</var>
+<arg>${track_size[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-30T22:54:09.439182" elapsed="0.001990"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-30T22:54:09.442875" level="INFO">${thumb_width} = 25</msg>
+<var>${thumb_width}</var>
+<arg>${thumb_size[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-30T22:54:09.441445" elapsed="0.001489"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-30T22:54:09.443560" level="INFO">${usable_width} = 639</msg>
+<var>${usable_width}</var>
+<arg>${track_width} - ${thumb_width}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-30T22:54:09.443162" elapsed="0.000450"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-30T22:54:09.444334" level="INFO">${value_range} = 29</msg>
+<var>${value_range}</var>
+<arg>${max_val} - ${min_val}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-30T22:54:09.443815" elapsed="0.000726"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-30T22:54:09.445286" level="INFO">${pixels_per_unit} = 22.03448275862069</msg>
+<var>${pixels_per_unit}</var>
+<arg>${usable_width} / ${value_range}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-30T22:54:09.444817" elapsed="0.000525"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-30T22:54:09.446357" level="INFO">${x_offset} = 198</msg>
+<var>${x_offset}</var>
+<arg>int((${target} - ${current_value}) * ${pixels_per_unit})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-30T22:54:09.445761" elapsed="0.000659"/>
+</kw>
+<kw name="Get Element Location" owner="Custom">
+<msg time="2025-06-30T22:54:09.963943" level="INFO">${thumb_loc} = {'x': 68, 'y': 3752}</msg>
+<var>${thumb_loc}</var>
+<arg>${slider_thumb}</arg>
+<status status="PASS" start="2025-06-30T22:54:09.446674" elapsed="0.517376"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-30T22:54:09.966332" level="INFO">${start_x} = 68</msg>
+<var>${start_x}</var>
+<arg>${thumb_loc['x']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-30T22:54:09.964400" elapsed="0.002233"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-30T22:54:09.969395" level="INFO">${start_y} = 3752</msg>
+<var>${start_y}</var>
+<arg>${thumb_loc['y']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-30T22:54:09.967051" elapsed="0.002430"/>
+</kw>
+<kw name="Drag And Drop By Offset" owner="SeleniumLibrary">
+<arg>${slider_thumb}</arg>
+<arg>${x_offset}</arg>
+<arg>0</arg>
+<doc>Drags the element identified with ``locator`` by ``xoffset/yoffset``.</doc>
+<status status="PASS" start="2025-06-30T22:54:09.969794" elapsed="1.058866"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:54:11.530688" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:54:11.029606" elapsed="0.501323"/>
+</kw>
+<arg>${tenure}</arg>
+<arg>${sliderTrack}</arg>
+<arg>${sliderThumb}</arg>
+<arg>${label}</arg>
+<arg>1</arg>
+<arg>30</arg>
+<status status="PASS" start="2025-06-30T22:54:06.840581" elapsed="4.690554"/>
+</kw>
+<arg>${TENURE}</arg>
+<status status="PASS" start="2025-06-30T22:54:02.088778" elapsed="9.442826"/>
+</kw>
+<kw name="Change Interest Rate">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INTEREST_TRACK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:54:11.533695" elapsed="1.040671"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:13.088433" level="INFO">${sliderTrack} = &lt;selenium.webdriver.remote.webelement.WebElement (session="1424c010c9a4edde5d824835b123a7f3", element="f.8902C5831442508D7DF5B8C48CB64CCA.d.17388276CAB9700FFFC423AB52FA5B99.e.41")&gt;</msg>
+<var>${sliderTrack}</var>
+<arg>${INTEREST_TRACK}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:12.574793" elapsed="0.513790"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:13.607591" level="INFO">${sliderThumb} = &lt;selenium.webdriver.remote.webelement.WebElement (session="1424c010c9a4edde5d824835b123a7f3", element="f.8902C5831442508D7DF5B8C48CB64CCA.d.17388276CAB9700FFFC423AB52FA5B99.e.42")&gt;</msg>
+<var>${sliderThumb}</var>
+<arg>${INTEREST_THUMB}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:13.088930" elapsed="0.518771"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:14.151160" level="INFO">${label} = &lt;selenium.webdriver.remote.webelement.WebElement (session="1424c010c9a4edde5d824835b123a7f3", element="f.8902C5831442508D7DF5B8C48CB64CCA.d.17388276CAB9700FFFC423AB52FA5B99.e.43")&gt;</msg>
+<var>${label}</var>
+<arg>${INTEREST_LABEL}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:13.608042" elapsed="0.543592"/>
+</kw>
+<kw name="Set Slider To Value" owner="check_EMI_Calculator">
+<kw name="Convert To Number" owner="BuiltIn">
+<msg time="2025-06-30T22:54:14.154381" level="INFO">${target} = 12.5</msg>
+<var>${target}</var>
+<arg>${target_value}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" start="2025-06-30T22:54:14.153754" elapsed="0.000702"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:14.673278" level="INFO">${current_text} = 10%</msg>
+<var>${current_text}</var>
+<arg>${label}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:14.154752" elapsed="0.518646"/>
+</kw>
+<kw name="Remove String" owner="String">
+<msg time="2025-06-30T22:54:14.674257" level="INFO">${current_text} = 10</msg>
+<var>${current_text}</var>
+<arg>${current_text}</arg>
+<arg>%</arg>
+<arg>${SPACE}</arg>
+<arg>,</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<status status="PASS" start="2025-06-30T22:54:14.673779" elapsed="0.000536"/>
+</kw>
+<kw name="Strip String" owner="String">
+<msg time="2025-06-30T22:54:14.675208" level="INFO">${current_text} = 10</msg>
+<var>${current_text}</var>
+<arg>${current_text}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-06-30T22:54:14.674558" elapsed="0.000738"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Convert To Number" owner="BuiltIn">
+<arg>${current_text}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" start="2025-06-30T22:54:14.678185" elapsed="0.000431"/>
+</kw>
+<msg time="2025-06-30T22:54:14.678814" level="INFO">${current_value} = 10.0</msg>
+<var>${current_value}</var>
+<arg>'${current_text}' != '${EMPTY}'</arg>
+<arg>Convert To Number</arg>
+<arg>${current_text}</arg>
+<arg>ELSE</arg>
+<arg>Set Variable</arg>
+<arg>${min_val}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-30T22:54:14.675595" elapsed="0.003272"/>
+</kw>
+<kw name="Get Element Size" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:15.718418" level="INFO">${track_size} = (664, 34)</msg>
+<var>${track_size}</var>
+<arg>${slider_track}</arg>
+<doc>Returns width and height of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:14.679107" elapsed="1.039451"/>
+</kw>
+<kw name="Get Element Size" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:16.753233" level="INFO">${thumb_size} = (25, 25)</msg>
+<var>${thumb_size}</var>
+<arg>${slider_thumb}</arg>
+<doc>Returns width and height of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:15.719139" elapsed="1.034196"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-30T22:54:16.755308" level="INFO">${track_width} = 664</msg>
+<var>${track_width}</var>
+<arg>${track_size[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-30T22:54:16.753712" elapsed="0.001655"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-30T22:54:16.757242" level="INFO">${thumb_width} = 25</msg>
+<var>${thumb_width}</var>
+<arg>${thumb_size[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-30T22:54:16.755594" elapsed="0.001720"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-30T22:54:16.758014" level="INFO">${usable_width} = 639</msg>
+<var>${usable_width}</var>
+<arg>${track_width} - ${thumb_width}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-30T22:54:16.757586" elapsed="0.000482"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-30T22:54:16.758697" level="INFO">${value_range} = 20.0</msg>
+<var>${value_range}</var>
+<arg>${max_val} - ${min_val}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-30T22:54:16.758282" elapsed="0.000466"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-30T22:54:16.759284" level="INFO">${pixels_per_unit} = 31.95</msg>
+<var>${pixels_per_unit}</var>
+<arg>${usable_width} / ${value_range}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-30T22:54:16.758946" elapsed="0.000386"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-30T22:54:16.759947" level="INFO">${x_offset} = 79</msg>
+<var>${x_offset}</var>
+<arg>int((${target} - ${current_value}) * ${pixels_per_unit})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-30T22:54:16.759533" elapsed="0.000461"/>
+</kw>
+<kw name="Get Element Location" owner="Custom">
+<msg time="2025-06-30T22:54:17.275783" level="INFO">${thumb_loc} = {'x': 267, 'y': 3614}</msg>
+<var>${thumb_loc}</var>
+<arg>${slider_thumb}</arg>
+<status status="PASS" start="2025-06-30T22:54:16.760190" elapsed="0.515696"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-30T22:54:17.277759" level="INFO">${start_x} = 267</msg>
+<var>${start_x}</var>
+<arg>${thumb_loc['x']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-30T22:54:17.276189" elapsed="0.001632"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-30T22:54:17.279443" level="INFO">${start_y} = 3614</msg>
+<var>${start_y}</var>
+<arg>${thumb_loc['y']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-30T22:54:17.278060" elapsed="0.001439"/>
+</kw>
+<kw name="Drag And Drop By Offset" owner="SeleniumLibrary">
+<arg>${slider_thumb}</arg>
+<arg>${x_offset}</arg>
+<arg>0</arg>
+<doc>Drags the element identified with ``locator`` by ``xoffset/yoffset``.</doc>
+<status status="PASS" start="2025-06-30T22:54:17.279727" elapsed="1.073212"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:54:18.855214" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:54:18.354094" elapsed="0.501353"/>
+</kw>
+<arg>${rate}</arg>
+<arg>${sliderTrack}</arg>
+<arg>${sliderThumb}</arg>
+<arg>${label}</arg>
+<arg>4.0</arg>
+<arg>24.0</arg>
+<status status="PASS" start="2025-06-30T22:54:14.152562" elapsed="4.703092"/>
+</kw>
+<arg>${INTEREST}</arg>
+<status status="PASS" start="2025-06-30T22:54:11.532606" elapsed="7.323199"/>
+</kw>
+<kw name="Verify EMI Calculated">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EMI_VALUE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:54:18.857556" elapsed="1.053487"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:20.428290" level="INFO">${emi_element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="1424c010c9a4edde5d824835b123a7f3", element="f.8902C5831442508D7DF5B8C48CB64CCA.d.17388276CAB9700FFFC423AB52FA5B99.e.48")&gt;</msg>
+<var>${emi_element}</var>
+<arg>${EMI_VALUE}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:19.911668" elapsed="0.516729"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:20.430083" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="1424c010c9a4edde5d824835b123a7f3", element="f.8902C5831442508D7DF5B8C48CB64CCA.d.17388276CAB9700FFFC423AB52FA5B99.e.48")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:54:20.429375" elapsed="0.540868"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:54:21.471680" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:54:20.970904" elapsed="0.500991"/>
+</kw>
+<arg>${emi_element}</arg>
+<status status="PASS" start="2025-06-30T22:54:20.428823" elapsed="1.043261"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:22.013977" level="INFO">${actual_emi} = ₹ 1,458</msg>
+<var>${actual_emi}</var>
+<arg>${emi_element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:21.472350" elapsed="0.541737"/>
+</kw>
+<kw name="Strip String" owner="String">
+<msg time="2025-06-30T22:54:22.014960" level="INFO">${actual_emi} = ₹ 1,458</msg>
+<var>${actual_emi}</var>
+<arg>${actual_emi}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-06-30T22:54:22.014535" elapsed="0.000495"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-30T22:54:22.015612" level="INFO">Actual EMI from website: ₹ 1,458</msg>
+<arg>Actual EMI from website: ${actual_emi}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-30T22:54:22.015289" elapsed="0.000433"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${actual_emi}</arg>
+<arg>${expected_emi}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-06-30T22:54:22.016344" elapsed="0.001130"/>
+</kw>
+<msg time="2025-06-30T22:54:22.017790" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Should Contain</arg>
+<arg>${actual_emi}</arg>
+<arg>${expected_emi}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-30T22:54:22.015987" elapsed="0.001876"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>not ${status}</arg>
+<arg>Fail</arg>
+<arg>EMI verification failed.\nExpected: ${expected_emi}\nActual: ${actual_emi}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-30T22:54:22.018207" elapsed="0.000469"/>
+</kw>
+<arg>${EMI_TEXT}</arg>
+<status status="PASS" start="2025-06-30T22:54:18.856764" elapsed="3.162080"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-30T22:54:22.019959" elapsed="2.645087"/>
+</kw>
+<doc>Test entire loan calculator flow</doc>
+<tag>Calculator</tag>
+<status status="PASS" start="2025-06-30T22:53:54.180069" elapsed="30.486344"/>
+</test>
+<status status="PASS" start="2025-06-30T22:53:53.756116" elapsed="30.913325"/>
+</suite>
+<suite id="s1-s2" name="LoginTest" source="C:\Users\Invcuser_71\Desktop\Python_Maghavitta_automation\NidhiFinder_sanity\Testcases\LoginTest.robot">
+<test id="s1-s2-t1" name="Login Test" line="44">
+<kw name="Random Phone Number" owner="Homepage">
+<msg time="2025-06-30T22:54:24.682129" level="INFO">${phone} = 9621669465</msg>
+<var>${phone}</var>
+<status status="PASS" start="2025-06-30T22:54:24.681958" elapsed="0.000203"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-06-30T22:54:24.682893" level="INFO">${phone} = 9621669465</msg>
+<arg>${phone}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-06-30T22:54:24.682691" elapsed="0.000249"/>
+</kw>
+<kw name="Initialize Fake Data">
+<kw name="First Name" owner="FakerLibrary">
+<msg time="2025-06-30T22:54:24.684159" level="INFO">${first_name} = Chase</msg>
+<var>${first_name}</var>
+<status status="PASS" start="2025-06-30T22:54:24.683859" elapsed="0.000328"/>
+</kw>
+<kw name="Last Name" owner="FakerLibrary">
+<msg time="2025-06-30T22:54:24.684557" level="INFO">${last_name} = Morris</msg>
+<var>${last_name}</var>
+<status status="PASS" start="2025-06-30T22:54:24.684292" elapsed="0.000289"/>
+</kw>
+<kw name="Email" owner="FakerLibrary">
+<msg time="2025-06-30T22:54:24.685003" level="INFO">${email} = charlesking@example.net</msg>
+<var>${email}</var>
+<status status="PASS" start="2025-06-30T22:54:24.684700" elapsed="0.000329"/>
+</kw>
+<kw name="Street Address" owner="FakerLibrary">
+<msg time="2025-06-30T22:54:24.685276" level="INFO">${street} = 7241 Daniel Drive Suite 451</msg>
+<var>${street}</var>
+<doc>:example: '791 Crist Parks'</doc>
+<status status="PASS" start="2025-06-30T22:54:24.685100" elapsed="0.000195"/>
+</kw>
+<kw name="City" owner="FakerLibrary">
+<msg time="2025-06-30T22:54:24.685502" level="INFO">${city} = New Kenneth</msg>
+<var>${city}</var>
+<doc>:example: 'Sashabury'</doc>
+<status status="PASS" start="2025-06-30T22:54:24.685361" elapsed="0.000158"/>
+</kw>
+<kw name="Zipcode" owner="FakerLibrary">
+<msg time="2025-06-30T22:54:24.685696" level="INFO">${zipcode} = 13527</msg>
+<var>${zipcode}</var>
+<status status="PASS" start="2025-06-30T22:54:24.685582" elapsed="0.000134"/>
+</kw>
+<kw name="Company" owner="FakerLibrary">
+<msg time="2025-06-30T22:54:24.686008" level="INFO">${company} = Watkins Ltd</msg>
+<var>${company}</var>
+<doc>:example: 'Acme Ltd'</doc>
+<status status="PASS" start="2025-06-30T22:54:24.685787" elapsed="0.000239"/>
+</kw>
+<kw name="Job" owner="FakerLibrary">
+<msg time="2025-06-30T22:54:24.686161" level="INFO">${job} = Occupational psychologist</msg>
+<var>${job}</var>
+<status status="PASS" start="2025-06-30T22:54:24.686082" elapsed="0.000095"/>
+</kw>
+<kw name="Credit Card Number" owner="FakerLibrary">
+<msg time="2025-06-30T22:54:24.686337" level="INFO">${credit_card} = 4656966681412004</msg>
+<var>${credit_card}</var>
+<doc>Generate a valid credit card number.</doc>
+<status status="PASS" start="2025-06-30T22:54:24.686228" elapsed="0.000125"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-06-30T22:54:24.686617" level="INFO">${first_name} = Chase</msg>
+<arg>${first_name}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-06-30T22:54:24.686505" elapsed="0.000138"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-06-30T22:54:24.686819" level="INFO">${last_name} = Morris</msg>
+<arg>${last_name}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-06-30T22:54:24.686716" elapsed="0.000126"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-06-30T22:54:24.686977" level="INFO">${email} = charlesking@example.net</msg>
+<arg>${email}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-06-30T22:54:24.686901" elapsed="0.000098"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-06-30T22:54:24.687123" level="INFO">${street} = 7241 Daniel Drive Suite 451</msg>
+<arg>${street}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-06-30T22:54:24.687051" elapsed="0.000092"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-06-30T22:54:24.687275" level="INFO">${city} = New Kenneth</msg>
+<arg>${city}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-06-30T22:54:24.687200" elapsed="0.000096"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-06-30T22:54:24.687420" level="INFO">${zipcode} = 13527</msg>
+<arg>${zipcode}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-06-30T22:54:24.687348" elapsed="0.000093"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-06-30T22:54:24.687567" level="INFO">${company} = Watkins Ltd</msg>
+<arg>${company}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-06-30T22:54:24.687494" elapsed="0.000093"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-06-30T22:54:24.687720" level="INFO">${job} = Occupational psychologist</msg>
+<arg>${job}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-06-30T22:54:24.687644" elapsed="0.000097"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-06-30T22:54:24.687866" level="INFO">${credit_card} = 4656966681412004</msg>
+<arg>${credit_card}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-06-30T22:54:24.687793" elapsed="0.000094"/>
+</kw>
+<status status="PASS" start="2025-06-30T22:54:24.683474" elapsed="0.004447"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:24.688590" level="INFO">Opening browser 'chrome' to base url 'https://nidhifinder.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-30T22:54:24.688434" elapsed="2.924227"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-30T22:54:27.613439" elapsed="0.527128"/>
+</kw>
+<kw name="Login With Credentials" owner="Loginpage_checkEligibility">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:54:31.143895" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:54:28.142671" elapsed="3.001480"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:31.145081" level="INFO">Clicking element 'xpath:(//*[contains(text(),'Check Eligibility')])[1]'.</msg>
+<arg>${checkEligibilityBtn_before_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:31.144565" elapsed="1.116101"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:54:35.262016" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:54:32.261061" elapsed="3.001312"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:35.263860" level="INFO">Typing text '9621669465' into text field 'xpath: /html/body/div/div[2]/div[2]/div/form/div/div/input'.</msg>
+<arg>${number_textbox}</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:35.262953" elapsed="1.649550"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:36.913355" level="INFO">Clicking element 'xpath://*[@id="root"]/div[2]/div[2]/div/form/button'.</msg>
+<arg>${GetOTPbtn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:36.912910" elapsed="1.082050"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:54:40.996094" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:54:37.995357" elapsed="3.001102"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:40.997950" level="INFO">Typing text '1' into text field 'xpath:(//*[@id="root"]/div[2]/div[2]/form/div[2]/input[1])'.</msg>
+<arg>${Otptextbox1}</arg>
+<arg>1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:40.997017" elapsed="1.623892"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:42.621863" level="INFO">Typing text '2' into text field 'xpath:(//*[@id="root"]/div[2]/div[2]/form/div[2]/input[2])'.</msg>
+<arg>${Otptextbox2}</arg>
+<arg>2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:42.621357" elapsed="1.593147"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:44.215821" level="INFO">Typing text '3' into text field 'xpath:(//*[@id="root"]/div[2]/div[2]/form/div[2]/input[3])'.</msg>
+<arg>${Otptextbox3}</arg>
+<arg>3</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:44.215076" elapsed="1.588788"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:45.804784" level="INFO">Typing text '4' into text field 'xpath:(//*[@id="root"]/div[2]/div[2]/form/div[2]/input[4])'.</msg>
+<arg>${Otptextbox4}</arg>
+<arg>4</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:45.804285" elapsed="1.600914"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:47.406196" level="INFO">Clicking button 'xpath://*[@id="root"]/div[2]/div[2]/form/button'.</msg>
+<arg>${verifyOTPbtn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:47.405667" elapsed="2.643005"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${checkEligibilityBtn_before_login}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-30T22:54:50.049071" elapsed="0.513585"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:50.563605" level="INFO">Clicking element 'xpath:(//*[contains(text(),'Check Eligibility')])[1]'.</msg>
+<arg>${checkEligibilityBtn_before_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:50.563090" elapsed="1.174995"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:54:54.740087" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:54:51.738571" elapsed="3.001867"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Basicinformationtxt}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-30T22:54:54.741007" elapsed="0.525641"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:55.269075" level="INFO">Clicking button 'xpath://*[@id="root"]/div[2]/div[2]/div[2]/form/div[8]/button'.</msg>
+<arg>${BasicinformationNextbtn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:54:55.268297" elapsed="2.678973"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:54:59.009335" level="INFO">Element 'xpath://*[contains(text(),'PAN number is required')]' contains text 'PAN number is required'.</msg>
+<arg>${panErrmsg}</arg>
+<arg>PAN number is required</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-06-30T22:54:57.948576" elapsed="1.061011"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:00.080916" level="INFO">Element 'xpath://*[contains(text(),'Full name is required')]' contains text 'Full name is required'.</msg>
+<arg>${FullnameErrmsg}</arg>
+<arg>Full name is required</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-06-30T22:54:59.009999" elapsed="1.071211"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:01.134376" level="INFO">Element 'xpath://*[contains(text(),'Email is required')]' contains text 'Email is required'.</msg>
+<arg>${Emailerrmsg}</arg>
+<arg>Email is required</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-06-30T22:55:00.081661" elapsed="1.052970"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:02.184880" level="INFO">Element 'xpath://*[contains(text(),'Date of birth is required')]' contains text 'Date of birth is required'.</msg>
+<arg>${DOBerrmsg}</arg>
+<arg>Date of birth is required</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-06-30T22:55:01.135036" elapsed="1.050705"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:02.187386" level="INFO">Typing text 'DMPLL9087F' into text field 'xpath://*[@id="root"]/div[2]/div[2]/div[2]/form/div[2]/input'.</msg>
+<arg>${Paninputfield}</arg>
+<arg>DMPLL9087F</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:55:02.186598" elapsed="1.687891"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:03.875976" level="INFO">Typing text 'Mohammed' into text field 'xpath://*[@id="root"]/div[2]/div[2]/div[2]/form/div[4]/input'.</msg>
+<arg>${Fullnameinputfield}</arg>
+<arg>Mohammed</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:55:03.875144" elapsed="1.683450"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:05.559519" level="INFO">Typing text 'iinvsysqa@gmail.com' into text field 'xpath://*[@id="root"]/div[2]/div[2]/div[2]/form/div[6]/input'.</msg>
+<arg>${Emailinputfield}</arg>
+<arg>iinvsysqa@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:55:05.559011" elapsed="1.705199"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:07.267783" level="INFO">Typing text '03042021' into text field 'xpath://*[@id="root"]/div[2]/div[2]/div[2]/form/div[5]/input'.</msg>
+<arg>${DOBinputfield}</arg>
+<arg>03042021</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:55:07.265156" elapsed="1.708245"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:08.974733" level="INFO">Clicking button 'xpath://*[@id="root"]/div[2]/div[2]/div[2]/form/div[8]/button'.</msg>
+<arg>${BasicinformationNextbtn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:55:08.974047" elapsed="2.689429"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:55:14.665026" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:55:11.663908" elapsed="3.001537"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:15.721020" level="INFO">Element 'xpath://*[contains(text(),'Residency Details')]' contains text 'Residency Details'.</msg>
+<arg>${ResidencyDetails}</arg>
+<arg>Residency Details</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-06-30T22:55:14.668079" elapsed="1.053293"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:15.722492" level="INFO">Clicking button 'xpath://*[contains(text(),'Next ')]'.</msg>
+<arg>${Nextbutton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:55:15.721877" elapsed="2.705825"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:19.477040" level="INFO">Element 'xpath://*[contains(text(),'Pincode is required')]' contains text 'Pincode is required'.</msg>
+<arg>${PincodeErrmsg}</arg>
+<arg>Pincode is required</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-06-30T22:55:18.428172" elapsed="1.049314"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:20.530233" level="INFO">Element 'xpath://*[contains(text(),'Address is required')]' contains text 'Address is required'.</msg>
+<arg>${AddressErrmsg}</arg>
+<arg>Address is required</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-06-30T22:55:19.478199" elapsed="1.052433"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:21.583463" level="INFO">Element 'xpath://*[contains(text(),'State is required')]' contains text 'State is required'.</msg>
+<arg>${StateErrmsg}</arg>
+<arg>State is required</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-06-30T22:55:20.531236" elapsed="1.052611"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:22.646928" level="INFO">Element 'xpath://*[contains(text(),'Monthly income is required')]' contains text 'Monthly income is required'.</msg>
+<arg>${MonthlyIcomeErrmsg}</arg>
+<arg>Monthly income is required</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-06-30T22:55:21.584296" elapsed="1.062992"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:23.701374" level="INFO">Element 'xpath://*[contains(text(),'Last salary date is required')]' contains text 'Last salary date is required'.</msg>
+<arg>${LastsalarydateErrmsg}</arg>
+<arg>Last salary date is required</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-06-30T22:55:22.647859" elapsed="1.054022"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:24.751755" level="INFO">Element 'xpath://*[contains(text(),'Loan amount is required')]' contains text 'Loan amount is required'.</msg>
+<arg>${LoanamountErrmsg}</arg>
+<arg>Loan amount is required</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-06-30T22:55:23.702946" elapsed="1.049136"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:24.753260" level="INFO">Typing text '607104' into text field 'xpath://*[@id="root"]/div[2]/div[2]/div[2]/form/div[3]/input'.</msg>
+<arg>${PincodeTextbox}</arg>
+<arg>607104</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:55:24.752561" elapsed="1.690006"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:26.444137" level="INFO">Typing text 'pondy' into text field 'xpath://*[@id="root"]/div[2]/div[2]/div[2]/form/div[4]/input'.</msg>
+<arg>${AddressTextbox}</arg>
+<arg>pondy</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:55:26.443205" elapsed="1.672397"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:28.119343" level="INFO">Clicking element 'xpath://*[@id="root"]/div[2]/div[2]/div[2]/form/div[5]/select'.</msg>
+<arg>${StateTextbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:55:28.118398" elapsed="1.121182"/>
+</kw>
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:29.240834" level="INFO">Selecting options from selection list 'xpath://*[@id="root"]/div[2]/div[2]/div[2]/form/div[5]/select' by index 1.</msg>
+<arg>${StateTextbox}</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="PASS" start="2025-06-30T22:55:29.240104" elapsed="5.242919"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:34.486578" level="INFO">Typing text '10000' into text field 'xpath://*[@id="root"]/div[2]/div[2]/div[2]/form/div[7]/input'.</msg>
+<arg>${Monthlyincometextbox}</arg>
+<arg>10000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:55:34.485068" elapsed="1.686621"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:36.172938" level="INFO">Typing text '03042021' into text field 'xpath://*[@id="root"]/div[2]/div[2]/div[2]/form/div[10]/input'.</msg>
+<arg>${lastsalarydatetextbox}</arg>
+<arg>03042021</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:55:36.172212" elapsed="1.657299"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:37.830461" level="INFO">Typing text '10000' into text field 'xpath://*[@id="root"]/div[2]/div[2]/div[2]/form/div[12]/input'.</msg>
+<arg>${Loanamounttextbox}</arg>
+<arg>10000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:55:37.829960" elapsed="1.685217"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:39.518103" level="INFO">Clicking element 'xpath://*[contains(text(),'Next ')]'.</msg>
+<arg>${Nextbutton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:55:39.516689" elapsed="1.130656"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:55:43.649602" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:55:40.648234" elapsed="3.002284"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:44.703485" level="INFO">Element 'xpath:(//*[contains(text(),'Summary Details')])[2]' contains text 'Summary Details'.</msg>
+<arg>${summarydetailstxt}</arg>
+<arg>Summary Details</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-06-30T22:55:43.651109" elapsed="1.052646"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:44.705094" level="INFO">Executing JavaScript:
+window.scrollTo(0,document.body.scrollHeight)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:55:44.704194" elapsed="0.516140"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:45.221235" level="INFO">Clicking element 'xpath://*[contains(text(),'Submit')]'.</msg>
+<arg>${submit button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:55:45.220714" elapsed="1.137314"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:55:49.360548" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:55:46.358846" elapsed="3.002133"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:50.418373" level="INFO">Element 'xpath://*[contains(text(),'Submission Successful')]' contains text 'Submission Successful'.</msg>
+<arg>${submission successful text}</arg>
+<arg>Submission Successful</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-06-30T22:55:49.361633" elapsed="1.057162"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:50.420643" level="INFO">Clicking element 'xpath://*[contains(text(),'Ok')]'.</msg>
+<arg>${ok btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:55:50.419619" elapsed="1.174944"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:55:54.596470" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:55:51.595392" elapsed="3.001420"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:55.649469" level="INFO">Element 'xpath:(//*[contains(text(),'Check Eligibility')])[1]' contains text 'Check Eligibility'.</msg>
+<arg>${checkEligibilityBtn_before_login}</arg>
+<arg>Check Eligibility</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-06-30T22:55:54.597408" elapsed="1.052552"/>
+</kw>
+<arg>${phone}</arg>
+<status status="PASS" start="2025-06-30T22:54:28.141945" elapsed="87.508512"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-30T22:55:55.651219" elapsed="2.603741"/>
+</kw>
+<status status="PASS" start="2025-06-30T22:54:24.681375" elapsed="93.574727"/>
+</test>
+<status status="PASS" start="2025-06-30T22:54:24.672158" elapsed="93.586373"/>
+</suite>
+<suite id="s1-s3" name="PageNavigation" source="C:\Users\Invcuser_71\Desktop\Python_Maghavitta_automation\NidhiFinder_sanity\Testcases\PageNavigation.robot">
+<test id="s1-s3-t1" name="CheckHomepagenavigators" line="53">
+<kw name="Setup Browser" owner="check_EMI_Calculator">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:55:58.276644" level="INFO">Opening browser 'chrome' to base url 'https://nidhifinder.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-30T22:55:58.276441" elapsed="3.242492"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-30T22:56:01.519304" elapsed="0.527322"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-06-30T22:56:02.047360" elapsed="0.504385"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-06-30T22:56:02.552125" elapsed="0.000353"/>
+</kw>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2025-06-30T22:55:58.276081" elapsed="4.276592"/>
+</kw>
+<kw name="OurServicesNavigationcheck" owner="Home_navigation">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Footer_Home}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:56:02.554454" elapsed="1.043381"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:04.108530" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.8E26593E3BF0D3CF942DE3569DA72A27.e.24")&gt;</msg>
+<var>${element}</var>
+<arg>${Footer_Home}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:03.598228" elapsed="0.510437"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:04.111488" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.8E26593E3BF0D3CF942DE3569DA72A27.e.24")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:56:04.110503" elapsed="0.524321"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:56:05.136007" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:56:04.635178" elapsed="0.501040"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:56:04.109179" elapsed="1.027261"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:05.137225" level="INFO">Clicking element '(//*[text()='Home'])[3]'.</msg>
+<arg>${Footer_Home}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:05.136751" elapsed="1.106407"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Header_Home}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:56:06.243598" elapsed="1.047781"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Footer_AboutUs}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:56:07.291756" elapsed="1.038111"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:08.852326" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.8E26593E3BF0D3CF942DE3569DA72A27.e.39")&gt;</msg>
+<var>${element}</var>
+<arg>${Footer_AboutUs}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:08.330430" elapsed="0.522036"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:08.854602" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.8E26593E3BF0D3CF942DE3569DA72A27.e.39")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:56:08.853680" elapsed="0.514946"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:56:09.869607" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:56:09.368972" elapsed="0.500881"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:56:08.852992" elapsed="1.017144"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:09.870912" level="INFO">Clicking element '(//*[text()='About Us'])[3]'.</msg>
+<arg>${Footer_AboutUs}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:09.870491" elapsed="1.104104"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:11.507325" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.8E26593E3BF0D3CF942DE3569DA72A27.e.48")&gt;</msg>
+<var>${element}</var>
+<arg>${Aboutus_Home}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:10.974975" elapsed="0.532465"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:11.509352" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.8E26593E3BF0D3CF942DE3569DA72A27.e.48")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:56:11.508545" elapsed="0.510177"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:56:12.519942" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:56:12.019145" elapsed="0.501048"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:56:11.507870" elapsed="1.012594"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Aboutus_Home}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:56:12.520801" elapsed="1.032498"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:13.554499" level="INFO">Clicking element '(//*[text()='Home'])[1]'.</msg>
+<arg>${Header_Home}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:13.553786" elapsed="1.083889"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Footer_Services}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:56:14.638136" elapsed="1.037345"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:16.197959" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.8E26593E3BF0D3CF942DE3569DA72A27.e.58")&gt;</msg>
+<var>${element}</var>
+<arg>${Footer_Services}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:15.675992" elapsed="0.522991"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:16.203056" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.8E26593E3BF0D3CF942DE3569DA72A27.e.58")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:56:16.201819" elapsed="0.514573"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:56:17.218172" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:56:16.716973" elapsed="0.501500"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:56:16.200719" elapsed="1.018168"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:17.219721" level="INFO">Clicking element '(//*[text()='Services'])[4]'.</msg>
+<arg>${Footer_Services}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:17.219237" elapsed="1.107039"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:18.851525" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.8E26593E3BF0D3CF942DE3569DA72A27.e.80")&gt;</msg>
+<var>${element}</var>
+<arg>${Services}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:18.326972" elapsed="0.524708"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:18.853835" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.8E26593E3BF0D3CF942DE3569DA72A27.e.80")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:56:18.852967" elapsed="0.513431"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:56:19.869036" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:56:19.367610" elapsed="0.501671"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:56:18.852197" elapsed="1.017313"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Services}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:56:19.869836" elapsed="1.033333"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:20.904055" level="INFO">Clicking element '(//*[text()='Home'])[1]'.</msg>
+<arg>${Header_Home}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:20.903605" elapsed="1.130500"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Footer_ContactUs}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:56:22.034726" elapsed="1.068405"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:23.623363" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.8E26593E3BF0D3CF942DE3569DA72A27.e.92")&gt;</msg>
+<var>${element}</var>
+<arg>${Footer_ContactUs}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:23.103654" elapsed="0.519842"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:23.625899" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.8E26593E3BF0D3CF942DE3569DA72A27.e.92")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:56:23.624910" elapsed="0.515093"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:56:24.646866" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:56:24.140386" elapsed="0.506678"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:56:23.624021" elapsed="1.023325"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:24.648954" level="INFO">Clicking element '(//*[text()='Contact Us'])[3]'.</msg>
+<arg>${Footer_ContactUs}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:24.648387" elapsed="1.095868"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:26.264686" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.8E26593E3BF0D3CF942DE3569DA72A27.e.112")&gt;</msg>
+<var>${element}</var>
+<arg>${ContactUs}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:25.744987" elapsed="0.519912"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:26.269986" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.8E26593E3BF0D3CF942DE3569DA72A27.e.112")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:56:26.268789" elapsed="0.520741"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:56:27.291082" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:56:26.790082" elapsed="0.501198"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:56:26.267481" elapsed="1.023976"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ContactUs}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:56:27.291721" elapsed="1.030406"/>
+</kw>
+<arg>${Header_Home}</arg>
+<arg>${Aboutus_Home}</arg>
+<arg>${Services}</arg>
+<arg>${ContactUs}</arg>
+<arg>${Footer_Home}</arg>
+<arg>${Footer_AboutUs}</arg>
+<arg>${Footer_Services}</arg>
+<arg>${Footer_ContactUs}</arg>
+<status status="PASS" start="2025-06-30T22:56:02.553386" elapsed="25.768989"/>
+</kw>
+<kw name="QuickLinksNavigation" owner="Home_navigation">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Footer_CheckEligibility}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:56:28.324660" elapsed="1.038674"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:29.880925" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.8E26593E3BF0D3CF942DE3569DA72A27.e.113")&gt;</msg>
+<var>${element}</var>
+<arg>${Footer_CheckEligibility}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:29.363816" elapsed="0.517289"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:29.884878" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.8E26593E3BF0D3CF942DE3569DA72A27.e.113")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:56:29.883944" elapsed="0.510161"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:56:30.896525" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:56:30.395256" elapsed="0.501480"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:56:29.882768" elapsed="1.014161"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:30.897682" level="INFO">Clicking element '//*[@id="root"]/div[2]/footer/div[1]/div[3]/ul/li[1]'.</msg>
+<arg>${Footer_CheckEligibility}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:30.897246" elapsed="1.085864"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Basicinfo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:56:31.983526" elapsed="1.030265"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-06-30T22:56:33.014163" elapsed="0.516585"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:34.053114" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.8E26593E3BF0D3CF942DE3569DA72A27.e.127")&gt;</msg>
+<var>${element}</var>
+<arg>${Footer_TermsAndConditions}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:33.531121" elapsed="0.522099"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:34.055009" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.8E26593E3BF0D3CF942DE3569DA72A27.e.127")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:56:34.054277" elapsed="0.523824"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:56:35.079701" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:56:34.578855" elapsed="0.501044"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:56:34.053633" elapsed="1.026441"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:35.080800" level="INFO">Clicking element '(//*[text()='Terms And Conditions'])[1]'.</msg>
+<arg>${Footer_TermsAndConditions}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:35.080337" elapsed="1.064335"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:36.671978" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.8E26593E3BF0D3CF942DE3569DA72A27.e.132")&gt;</msg>
+<var>${element}</var>
+<arg>${Terms&amp;condition}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:36.145439" elapsed="0.526641"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:36.674358" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.8E26593E3BF0D3CF942DE3569DA72A27.e.132")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:56:36.673329" elapsed="0.513067"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:56:37.688005" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:56:37.186987" elapsed="0.501260"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:56:36.672508" elapsed="1.015945"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Terms&amp;condition}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:56:37.688759" elapsed="1.060535"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Header_Home}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:56:38.750382" elapsed="1.030974"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:40.306127" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.8E26593E3BF0D3CF942DE3569DA72A27.e.134")&gt;</msg>
+<var>${element}</var>
+<arg>${Footer_PrivacyPolicy}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:39.782337" elapsed="0.523910"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:40.308120" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.8E26593E3BF0D3CF942DE3569DA72A27.e.134")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:56:40.307320" elapsed="0.514316"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:56:41.322917" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:56:40.822133" elapsed="0.501019"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:56:40.306685" elapsed="1.016726"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:41.324306" level="INFO">Clicking element '(//*[text()='Privacy Policy'])[1]'.</msg>
+<arg>${Footer_PrivacyPolicy}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:41.323746" elapsed="1.999345"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:43.842027" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.142")&gt;</msg>
+<var>${element}</var>
+<arg>${PrivacyPolicy}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:43.323529" elapsed="0.518675"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:43.846945" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.142")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:56:43.844535" elapsed="0.515791"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:56:44.861908" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:56:44.361039" elapsed="0.501137"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:56:43.843075" elapsed="1.019367"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PrivacyPolicy}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:56:44.863313" elapsed="1.055929"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:45.920173" level="INFO">Clicking element '(//*[text()='Home'])[1]'.</msg>
+<arg>${Header_Home}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:45.919669" elapsed="1.075817"/>
+</kw>
+<arg>${Footer_CheckEligibility}</arg>
+<arg>${Footer_TermsAndConditions}</arg>
+<arg>${Footer_PrivacyPolicy}</arg>
+<arg>${Basicinfo}</arg>
+<arg>${Terms&amp;condition}</arg>
+<arg>${PrivacyPolicy}</arg>
+<arg>${Header_Home}</arg>
+<status status="PASS" start="2025-06-30T22:56:28.323607" elapsed="18.672395"/>
+</kw>
+<kw name="checkLoansnavigation" owner="Home_navigation">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Footer_PersonalLoan}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:56:47.004378" elapsed="1.050824"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:48.574665" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.153")&gt;</msg>
+<var>${element}</var>
+<arg>${Footer_PersonalLoan}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:48.055638" elapsed="0.519144"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:48.576553" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.153")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:56:48.575801" elapsed="0.515829"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:56:49.593284" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:56:49.092129" elapsed="0.501368"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:56:48.575218" elapsed="1.018463"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:49.594680" level="INFO">Clicking element '(//*[text()='Personal Loan'])[4]'.</msg>
+<arg>${Footer_PersonalLoan}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:49.594011" elapsed="1.129650"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:51.239627" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.172")&gt;</msg>
+<var>${element}</var>
+<arg>${PersonalLoan}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:50.724058" elapsed="0.515692"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:51.242125" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.172")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:56:51.240952" elapsed="0.520313"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:56:52.262822" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:56:51.761669" elapsed="0.501505"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:56:51.240230" elapsed="1.023273"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PersonalLoan}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:56:52.264099" elapsed="1.033198"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:53.300119" level="INFO">Clicking element '(//*[text()='Home'])[1]'.</msg>
+<arg>${Header_Home}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:53.298911" elapsed="1.111037"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Footer_HomeLoan}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:56:54.410416" elapsed="1.045666"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:55.975589" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.182")&gt;</msg>
+<var>${element}</var>
+<arg>${Footer_HomeLoan}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:55.456510" elapsed="0.519195"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:55.977755" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.182")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:56:55.976844" elapsed="0.513344"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:56:56.991491" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:56:56.490571" elapsed="0.501147"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:56:55.976142" elapsed="1.015784"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:56.992775" level="INFO">Clicking element '(//*[text()='Home Loan'])[4]'.</msg>
+<arg>${Footer_HomeLoan}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:56.992235" elapsed="1.131078"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:58.636632" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.194")&gt;</msg>
+<var>${element}</var>
+<arg>${Homeloan}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:56:58.123691" elapsed="0.513075"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:56:58.639132" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.194")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:56:58.638109" elapsed="0.521446"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:56:59.661159" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:56:59.160251" elapsed="0.501243"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:56:58.637269" elapsed="1.024528"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Homeloan}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:56:59.662225" elapsed="1.037343"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:00.700700" level="INFO">Clicking element '(//*[text()='Home'])[1]'.</msg>
+<arg>${Header_Home}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:57:00.700093" elapsed="1.093933"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Footer_EducationLoan}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:57:01.794483" elapsed="1.048139"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:03.360530" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.204")&gt;</msg>
+<var>${element}</var>
+<arg>${Footer_EducationLoan}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:57:02.843138" elapsed="0.517598"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:03.363641" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.204")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:57:03.362563" elapsed="0.515117"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:57:04.379438" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:57:03.878226" elapsed="0.501494"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:57:03.361461" elapsed="1.018465"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:04.380594" level="INFO">Clicking element '(//*[text()='Education Loan'])[4]'.</msg>
+<arg>${Footer_EducationLoan}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:57:04.380194" elapsed="1.129253"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:06.026580" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.217")&gt;</msg>
+<var>${element}</var>
+<arg>${EducationLoan}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:57:05.509872" elapsed="0.516832"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:06.028812" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.217")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:57:06.027914" elapsed="0.515095"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:57:07.044352" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:57:06.543390" elapsed="0.501156"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:57:06.027162" elapsed="1.017794"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EducationLoan}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:57:07.045285" elapsed="1.033948"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:08.080142" level="INFO">Clicking element '(//*[text()='Home'])[1]'.</msg>
+<arg>${Header_Home}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:57:08.079673" elapsed="1.089412"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Footer_AutoLoan}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:57:09.169517" elapsed="1.041274"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:10.730928" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.227")&gt;</msg>
+<var>${element}</var>
+<arg>${Footer_AutoLoan}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:57:10.211290" elapsed="0.519831"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:10.735253" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.227")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:57:10.734085" elapsed="0.519342"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:57:11.754574" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:57:11.253801" elapsed="0.500969"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:57:10.732393" elapsed="1.022549"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:11.755737" level="INFO">Clicking element '(//*[text()='Auto Loan'])[4]'.</msg>
+<arg>${Footer_AutoLoan}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:57:11.755219" elapsed="1.101781"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:13.378756" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.239")&gt;</msg>
+<var>${element}</var>
+<arg>${AutoLoan}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:57:12.857498" elapsed="0.521353"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:13.381440" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.239")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:57:13.380290" elapsed="0.507890"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:57:14.389431" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:57:13.888591" elapsed="0.501092"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:57:13.379358" elapsed="1.010567"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${AutoLoan}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:57:14.390338" elapsed="1.053360"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:15.444720" level="INFO">Clicking element '(//*[text()='Home'])[1]'.</msg>
+<arg>${Header_Home}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:57:15.444126" elapsed="1.079225"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Footer_BusinessLoan}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:57:16.523896" elapsed="1.043976"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:18.091810" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.249")&gt;</msg>
+<var>${element}</var>
+<arg>${Footer_BusinessLoan}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:57:17.568305" elapsed="0.523659"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:18.094376" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.249")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:57:18.093421" elapsed="0.514093"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:57:19.108778" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:57:18.607958" elapsed="0.501094"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:57:18.092600" elapsed="1.016728"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:19.110460" level="INFO">Clicking element '(//*[text()='Business Loan'])[5]'.</msg>
+<arg>${Footer_BusinessLoan}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:57:19.109754" elapsed="1.165426"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:20.800566" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.261")&gt;</msg>
+<var>${element}</var>
+<arg>${BusinessLoan}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:57:20.275880" elapsed="0.525114"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:20.804095" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.261")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:57:20.802973" elapsed="0.519534"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:57:21.824582" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:57:21.322959" elapsed="0.501843"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:57:20.801927" elapsed="1.023087"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BusinessLoan}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:57:21.825588" elapsed="1.036878"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:22.863803" level="INFO">Clicking element '(//*[text()='Home'])[1]'.</msg>
+<arg>${Header_Home}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:57:22.863130" elapsed="1.078470"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Footer_LoanAgainstProperty}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:57:23.942097" elapsed="1.062431"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:25.551407" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.271")&gt;</msg>
+<var>${element}</var>
+<arg>${Footer_LoanAgainstProperty}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:57:25.005015" elapsed="0.546500"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:25.554260" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.271")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:57:25.553474" elapsed="0.514310"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:57:26.569362" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:57:26.068169" elapsed="0.501441"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:57:25.551931" elapsed="1.017908"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:26.570714" level="INFO">Clicking element '(//*[text()='Loan Against Property'])[4]'.</msg>
+<arg>${Footer_LoanAgainstProperty}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:57:26.570169" elapsed="1.085926"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:28.173500" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.283")&gt;</msg>
+<var>${element}</var>
+<arg>${LoanAgainstProperty}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:57:27.656513" elapsed="0.517089"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:28.175878" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.283")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:57:28.174659" elapsed="0.515991"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:57:29.191642" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:57:28.691055" elapsed="0.500849"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:57:28.174034" elapsed="1.018118"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LoanAgainstProperty}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:57:29.192573" elapsed="1.024057"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:30.218064" level="INFO">Clicking element '(//*[text()='Home'])[1]'.</msg>
+<arg>${Header_Home}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:57:30.217176" elapsed="1.060370"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Footer_GoldLoan}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:57:31.278202" elapsed="1.045313"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:32.843525" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.293")&gt;</msg>
+<var>${element}</var>
+<arg>${Footer_GoldLoan}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:57:32.323958" elapsed="0.519689"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:32.846063" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.293")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:57:32.845100" elapsed="0.515705"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:57:33.862005" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:57:33.361208" elapsed="0.500947"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:57:32.844368" elapsed="1.017872"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:33.862655" level="INFO">Clicking element '(//*[text()='Gold Loan'])[4]'.</msg>
+<arg>${Footer_GoldLoan}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:57:33.862424" elapsed="1.120321"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:35.499263" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.305")&gt;</msg>
+<var>${element}</var>
+<arg>${GoldLoan}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:57:34.983087" elapsed="0.517370"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:35.505158" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.305")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:57:35.503790" elapsed="0.524081"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:57:36.529940" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:57:36.028812" elapsed="0.501383"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:57:35.502173" elapsed="1.028265"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${GoldLoan}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:57:36.531197" elapsed="1.032423"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:37.567586" level="INFO">Clicking element '(//*[text()='Home'])[1]'.</msg>
+<arg>${Header_Home}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:57:37.565877" elapsed="1.082021"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Footer_GovtSchemeBasedLoan}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:57:38.650082" elapsed="1.046226"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:40.212156" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.315")&gt;</msg>
+<var>${element}</var>
+<arg>${Footer_GovtSchemeBasedLoan}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:57:39.696689" elapsed="0.515642"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:40.215731" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.315")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:57:40.213828" elapsed="0.518309"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:57:41.234374" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:57:40.733252" elapsed="0.501355"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:57:40.212941" elapsed="1.021882"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:41.235741" level="INFO">Clicking element '(//*[text()='Govt Scheme Based Loan'])[4]'.</msg>
+<arg>${Footer_GovtSchemeBasedLoan}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:57:41.235199" elapsed="1.089174"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:42.850877" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.327")&gt;</msg>
+<var>${element}</var>
+<arg>${GovtSchemeBasedLoan}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-06-30T22:57:42.324890" elapsed="0.526094"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-30T22:57:42.852570" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="766dd17dbfd3bcf7f68075afe5964395", element="f.3E4C18EA8019F27059E795F3A51EF4EE.d.7CB7848A6D76F47656491918CED8677C.e.327")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-30T22:57:42.851781" elapsed="0.509248"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-30T22:57:43.863099" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-30T22:57:43.361801" elapsed="0.501569"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-06-30T22:57:42.851324" elapsed="1.012287"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${GovtSchemeBasedLoan}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-30T22:57:43.864526" elapsed="1.059863"/>
+</kw>
+<arg>${Header_Home}</arg>
+<arg>${Footer_PersonalLoan}</arg>
+<arg>${Footer_HomeLoan}</arg>
+<arg>${Footer_EducationLoan}</arg>
+<arg>${Footer_AutoLoan}</arg>
+<arg>${Footer_BusinessLoan}</arg>
+<arg>${Footer_LoanAgainstProperty}</arg>
+<arg>${Footer_GoldLoan}</arg>
+<arg>${Footer_GovtSchemeBasedLoan}</arg>
+<arg>${PersonalLoan}</arg>
+<arg>${Homeloan}</arg>
+<arg>${EducationLoan}</arg>
+<arg>${AutoLoan}</arg>
+<arg>${BusinessLoan}</arg>
+<arg>${LoanAgainstProperty}</arg>
+<arg>${GoldLoan}</arg>
+<arg>${GovtSchemeBasedLoan}</arg>
+<status status="PASS" start="2025-06-30T22:56:47.000561" elapsed="57.924153"/>
+</kw>
+<doc>Test Home page navigators in Nidhi Finder</doc>
+<status status="PASS" start="2025-06-30T22:55:58.275357" elapsed="106.650451"/>
+</test>
+<status status="PASS" start="2025-06-30T22:55:58.260878" elapsed="106.667168"/>
+</suite>
+<status status="PASS" start="2025-06-30T22:53:53.734378" elapsed="231.197463"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Calculator</stat>
+</tag>
+<suite>
+<stat name="Testcases" id="s1" pass="3" fail="0" skip="0">Testcases</stat>
+<stat name="EMIpage" id="s1-s1" pass="1" fail="0" skip="0">Testcases.EMIpage</stat>
+<stat name="LoginTest" id="s1-s2" pass="1" fail="0" skip="0">Testcases.LoginTest</stat>
+<stat name="PageNavigation" id="s1-s3" pass="1" fail="0" skip="0">Testcases.PageNavigation</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-06-30T22:53:54.169228" level="WARN">Error in file 'C:\Users\Invcuser_71\Desktop\Python_Maghavitta_automation\NidhiFinder_sanity\Pages\check_EMI_Calculator.robot' on line 80: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
