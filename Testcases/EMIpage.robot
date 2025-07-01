@@ -1,37 +1,3 @@
-# *** Settings ***
-# Library    SeleniumLibrary
-# Library    FakerLibrary
-# Resource   ../Pages/Loginpage_checkEligibility.robot
-# Resource   ../Pages/check_EMI_Calculator.robot
-# Library    ../Libraries/Homepage.py    WITH NAME    Homepage
-# Library     ../Libraries/LoanLibraries.py            
-
-
-
-# *** Variables ***
-# ${URL}      https://nidhifinder.com/
-# ${BROWSER}  chrome
-
-# ${LOAN_AMOUNT}    100000
-# ${TENURE}    10
-# ${INTEREST}    12.5
-# ${EMI_TEXT}    ₹1,234
-
-
-
-
-# *** Test Cases ***
-# Test Loan Calculator Flow
-#     [Documentation]    Test entire loan calculator flow
-#     Setup Browser      ${URL}  ${BROWSER}
-#     Enter Loan Amount    ${LOAN_AMOUNT}
-#     Change Tenure        ${TENURE}
-#     Change Interest Rate    ${INTEREST}
-#     Verify EMI Calculated    ${EMI_TEXT}
-
-
-
-
 *** Settings ***
 # Resource    CommonKeywords.robot
 Resource    ../Pages/Loginpage_checkEligibility.robot
