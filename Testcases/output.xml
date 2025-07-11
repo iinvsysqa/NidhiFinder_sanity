@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.13.2 on win32)" generated="2025-07-11T10:25:33.541953" rpa="false" schemaversion="5">
+<suite id="s1" name="PageNavigation" source="C:\Users\Invcuser_71\Desktop\Python_Maghavitta_automation\NidhiFinder_sanity\Testcases\PageNavigation.robot">
+<test id="s1-t1" name="CheckHomepagenavigators" line="53">
+<kw name="Setup Browser" owner="check_EMI_Calculator">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-11T10:25:34.101635" level="INFO">Opening browser 'chrome' to base url 'https://nidhifinder.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-11T10:25:34.101430" elapsed="3.118292"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-11T10:25:37.220030" elapsed="0.193879"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-07-11T10:25:37.414086" elapsed="0.001790"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-07-11T10:25:37.416164" elapsed="0.000251"/>
+</kw>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2025-07-11T10:25:34.100486" elapsed="3.316081"/>
+</kw>
+<kw name="OurServicesNavigationcheck" owner="Home_navigation">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Footer_Home}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-11T10:25:37.417897" elapsed="1.042866"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-07-11T10:25:38.978425" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="8723ba59a5f88428e888cb2a7d937932", element="f.92972534FBC5390C507ED292CE290978.d.83DC396A5A42D462A316C429FD23F45A.e.9")&gt;</msg>
+<var>${element}</var>
+<arg>${Footer_Home}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-07-11T10:25:38.461550" elapsed="0.516984"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-07-11T10:25:38.980467" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="8723ba59a5f88428e888cb2a7d937932", element="f.92972534FBC5390C507ED292CE290978.d.83DC396A5A42D462A316C429FD23F45A.e.9")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-07-11T10:25:38.979470" elapsed="0.508686"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-11T10:25:39.990508" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-11T10:25:39.488633" elapsed="0.502151"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-07-11T10:25:38.978920" elapsed="1.012142"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-11T10:25:39.992899" level="INFO">Clicking element '(//*[text()='Home'])[3]'.</msg>
+<arg>${Footer_Home}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T10:25:39.991480" elapsed="1.143916"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Header_Home}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-11T10:25:41.135924" elapsed="1.045484"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Footer_AboutUs}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-11T10:25:42.181894" elapsed="1.048219"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-07-11T10:25:43.748018" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="8723ba59a5f88428e888cb2a7d937932", element="f.92972534FBC5390C507ED292CE290978.d.83DC396A5A42D462A316C429FD23F45A.e.37")&gt;</msg>
+<var>${element}</var>
+<arg>${Footer_AboutUs}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-07-11T10:25:43.230453" elapsed="0.517693"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-07-11T10:25:43.750362" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="8723ba59a5f88428e888cb2a7d937932", element="f.92972534FBC5390C507ED292CE290978.d.83DC396A5A42D462A316C429FD23F45A.e.37")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-07-11T10:25:43.749435" elapsed="0.516372"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-11T10:25:44.767321" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-11T10:25:44.266188" elapsed="0.501386"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-07-11T10:25:43.748672" elapsed="1.019135"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-11T10:25:44.768668" level="INFO">Clicking element '(//*[text()='About Us'])[3]'.</msg>
+<arg>${Footer_AboutUs}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T10:25:44.768164" elapsed="1.116243"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-07-11T10:25:46.403628" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="8723ba59a5f88428e888cb2a7d937932", element="f.92972534FBC5390C507ED292CE290978.d.83DC396A5A42D462A316C429FD23F45A.e.45")&gt;</msg>
+<var>${element}</var>
+<arg>${Aboutus_Home}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-07-11T10:25:45.884960" elapsed="0.518779"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-07-11T10:25:46.405988" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="8723ba59a5f88428e888cb2a7d937932", element="f.92972534FBC5390C507ED292CE290978.d.83DC396A5A42D462A316C429FD23F45A.e.45")&gt;'</msg>
+<arg>arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-07-11T10:25:46.405133" elapsed="0.508378"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-11T10:25:47.414407" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-11T10:25:46.913888" elapsed="0.500936"/>
+</kw>
+<arg>${element}</arg>
+<status status="PASS" start="2025-07-11T10:25:46.404269" elapsed="1.010783"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-07-11T10:25:47.620679" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6772a6f75+76917]
+	GetHandleVerifier [0x0x7ff6772a6fd0+77008]
+	(No symbol) [0x0x7ff677059c1c]
+	(No symbol) [0x0x7ff6770a055f]
+	(No symbol) [0x0x7ff6770d8332]
+	(No symbol) [0x0x7ff6770d2e53]
+	(No symbol) [0x0x7ff6770d1f19]
+	(No symbol) [0x0x7ff677024b05]
+	GetHandleVerifier [0x0x7ff67757d2ad+3051437]
+	GetHandleVerifier [0x0x7ff677577903+3028483]
+	GetHandleVerifier [0x0x7ff67759589d+3151261]
+	GetHandleVerifier [0x0x7ff6772c183e+185662]
+	GetHandleVerifier [0x0x7ff6772c96ff+218111]
+	(No symbol) [0x0x7ff677023b00]
+	GetHandleVerifier [0x0x7ff677695f18+4201496]
+	BaseThreadInitThunk [0x0x7ffb8cb0e8d7+23]
+	RtlUserThreadStart [0x0x7ffb8d8fc34c+44]
+</msg>
+<msg time="2025-07-11T10:25:47.621929" level="FAIL">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6772a6f75+76917]
+	GetHandleVerifier [0x0x7ff6772a6fd0+77008]
+	(No symbol) [0x0x7ff677059dea]
+	(No symbol) [0x0x7ff677045f15]
+	(No symbol) [0x0x7ff67706abf4]
+	(No symbol) [0x0x7ff6770dfa85]
+	(No symbol) [0x0x7ff6770fff72]
+	(No symbol) [0x0x7ff6770d8243]
+	(No symbol) [0x0x7ff6770a1431]
+	(No symbol) [0x0x7ff6770a21c3]
+	GetHandleVerifier [0x0x7ff67757d2ad+3051437]
+	GetHandleVerifier [0x0x7ff677577903+3028483]
+	GetHandleVerifier [0x0x7ff67759589d+3151261]
+	GetHandleVerifier [0x0x7ff6772c183e+185662]
+	GetHandleVerifier [0x0x7ff6772c96ff+218111]
+	GetHandleVerifier [0x0x7ff6772afaf4+112628]
+	GetHandleVerifier [0x0x7ff6772afca9+113065]
+	GetHandleVerifier [0x0x7ff677296c78+10616]
+	BaseThreadInitThunk [0x0x7ffb8cb0e8d7+23]
+	RtlUserThreadStart [0x0x7ffb8d8fc34c+44]
+</msg>
+<arg>${Aboutus_Home}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-07-11T10:25:47.415323" elapsed="0.223612">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6772a6f75+76917]
+	GetHandleVerifier [0x0x7ff6772a6fd0+77008]
+	(No symbol) [0x0x7ff677059dea]
+	(No symbol) [0x0x7ff677045f15]
+	(No symbol) [0x0x7ff67706abf4]
+	(No symbol) [0x0x7ff6770dfa85]
+	(No symbol) [0x0x7ff6770fff72]
+	(No symbol) [0x0x7ff6770d8243]
+	(No symbol) [0x0x7ff6770a1431]
+	(No symbol) [0x0x7ff6770a21c3]
+	GetHandleVerifier [0x0x7ff67757d2ad+3051437]
+	GetHandleVerifier [0x0x7ff677577903+3028483]
+	GetHandleVerifier [0x0x7ff67759589d+3151261]
+	GetHandleVerifier [0x0x7ff6772c183e+185662]
+	GetHandleVerifier [0x0x7ff6772c96ff+218111]
+	GetHandleVerifier [0x0x7ff6772afaf4+112628]
+	GetHandleVerifier [0x0x7ff6772afca9+113065]
+	GetHandleVerifier [0x0x7ff677296c78+10616]
+	BaseThreadInitThunk [0x0x7ffb8cb0e8d7+23]
+	RtlUserThreadStart [0x0x7ffb8d8fc34c+44]
+</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${Header_Home}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T10:25:47.639112" elapsed="0.000028"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Footer_Services}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-07-11T10:25:47.639223" elapsed="0.000018"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<var>${element}</var>
+<arg>${Footer_Services}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T10:25:47.639303" elapsed="0.000014"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<arg>${element}</arg>
+<status status="NOT RUN" start="2025-07-11T10:25:47.639426" elapsed="0.000020"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${Footer_Services}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T10:25:47.639505" elapsed="0.000017"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<var>${element}</var>
+<arg>${Services}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T10:25:47.639575" elapsed="0.000014"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<arg>${element}</arg>
+<status status="NOT RUN" start="2025-07-11T10:25:47.639670" elapsed="0.000017"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Services}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-07-11T10:25:47.639739" elapsed="0.000013"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${Header_Home}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T10:25:47.639800" elapsed="0.000013"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Footer_ContactUs}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-07-11T10:25:47.639872" elapsed="0.000013"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<var>${element}</var>
+<arg>${Footer_ContactUs}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T10:25:47.639937" elapsed="0.000013"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<arg>${element}</arg>
+<status status="NOT RUN" start="2025-07-11T10:25:47.640019" elapsed="0.000016"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${Footer_ContactUs}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T10:25:47.640085" elapsed="0.000020"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<var>${element}</var>
+<arg>${ContactUs}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T10:25:47.640156" elapsed="0.000013"/>
+</kw>
+<kw name="Scroll To Element" owner="check_EMI_Calculator">
+<arg>${element}</arg>
+<status status="NOT RUN" start="2025-07-11T10:25:47.640229" elapsed="0.000016"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ContactUs}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-07-11T10:25:47.640296" elapsed="0.000012"/>
+</kw>
+<arg>${Header_Home}</arg>
+<arg>${Aboutus_Home}</arg>
+<arg>${Services}</arg>
+<arg>${ContactUs}</arg>
+<arg>${Footer_Home}</arg>
+<arg>${Footer_AboutUs}</arg>
+<arg>${Footer_Services}</arg>
+<arg>${Footer_ContactUs}</arg>
+<status status="FAIL" start="2025-07-11T10:25:37.417465" elapsed="10.222944">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6772a6f75+76917]
+	GetHandleVerifier [0x0x7ff6772a6fd0+77008]
+	(No symbol) [0x0x7ff677059dea]
+	(No symbol) [0x0x7ff677045f15]
+	(No symbol) [0x0x7ff67706abf4]
+	(No symbol) [0x0x7ff6770dfa85]
+	(No symbol) [0x0x7ff6770fff72]
+	(No symbol) [0x0x7ff6770d8243]
+	(No symbol) [0x0x7ff6770a1431]
+	(No symbol) [0x0x7ff6770a21c3]
+	GetHandleVerifier [0x0x7ff67757d2ad+3051437]
+	GetHandleVerifier [0x0x7ff677577903+3028483]
+	GetHandleVerifier [0x0x7ff67759589d+3151261]
+	GetHandleVerifier [0x0x7ff6772c183e+185662]
+	GetHandleVerifier [0x0x7ff6772c96ff+218111]
+	GetHandleVerifier [0x0x7ff6772afaf4+112628]
+	GetHandleVerifier [0x0x7ff6772afca9+113065]
+	GetHandleVerifier [0x0x7ff677296c78+10616]
+	BaseThreadInitThunk [0x0x7ffb8cb0e8d7+23]
+	RtlUserThreadStart [0x0x7ffb8d8fc34c+44]
+</status>
+</kw>
+<kw name="QuickLinksNavigation" owner="Home_navigation">
+<arg>${Footer_CheckEligibility}</arg>
+<arg>${Footer_TermsAndConditions}</arg>
+<arg>${Footer_PrivacyPolicy}</arg>
+<arg>${Basicinfo}</arg>
+<arg>${Terms&amp;condition}</arg>
+<arg>${PrivacyPolicy}</arg>
+<arg>${Header_Home}</arg>
+<status status="NOT RUN" start="2025-07-11T10:25:47.641114" elapsed="0.000031"/>
+</kw>
+<kw name="checkLoansnavigation" owner="Home_navigation">
+<arg>${Header_Home}</arg>
+<arg>${Footer_PersonalLoan}</arg>
+<arg>${Footer_HomeLoan}</arg>
+<arg>${Footer_EducationLoan}</arg>
+<arg>${Footer_AutoLoan}</arg>
+<arg>${Footer_BusinessLoan}</arg>
+<arg>${Footer_LoanAgainstProperty}</arg>
+<arg>${Footer_GoldLoan}</arg>
+<arg>${Footer_GovtSchemeBasedLoan}</arg>
+<arg>${PersonalLoan}</arg>
+<arg>${Homeloan}</arg>
+<arg>${EducationLoan}</arg>
+<arg>${AutoLoan}</arg>
+<arg>${BusinessLoan}</arg>
+<arg>${LoanAgainstProperty}</arg>
+<arg>${GoldLoan}</arg>
+<arg>${GovtSchemeBasedLoan}</arg>
+<status status="NOT RUN" start="2025-07-11T10:25:47.641895" elapsed="0.000029"/>
+</kw>
+<doc>Test Home page navigators in Nidhi Finder</doc>
+<status status="FAIL" start="2025-07-11T10:25:34.097042" elapsed="13.545375">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=138.0.7204.97)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6772a6f75+76917]
+	GetHandleVerifier [0x0x7ff6772a6fd0+77008]
+	(No symbol) [0x0x7ff677059dea]
+	(No symbol) [0x0x7ff677045f15]
+	(No symbol) [0x0x7ff67706abf4]
+	(No symbol) [0x0x7ff6770dfa85]
+	(No symbol) [0x0x7ff6770fff72]
+	(No symbol) [0x0x7ff6770d8243]
+	(No symbol) [0x0x7ff6770a1431]
+	(No symbol) [0x0x7ff6770a21c3]
+	GetHandleVerifier [0x0x7ff67757d2ad+3051437]
+	GetHandleVerifier [0x0x7ff677577903+3028483]
+	GetHandleVerifier [0x0x7ff67759589d+3151261]
+	GetHandleVerifier [0x0x7ff6772c183e+185662]
+	GetHandleVerifier [0x0x7ff6772c96ff+218111]
+	GetHandleVerifier [0x0x7ff6772afaf4+112628]
+	GetHandleVerifier [0x0x7ff6772afca9+113065]
+	GetHandleVerifier [0x0x7ff677296c78+10616]
+	BaseThreadInitThunk [0x0x7ffb8cb0e8d7+23]
+	RtlUserThreadStart [0x0x7ffb8d8fc34c+44]
+</status>
+</test>
+<status status="FAIL" start="2025-07-11T10:25:33.543267" elapsed="14.100097"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="PageNavigation" id="s1" pass="0" fail="1" skip="0">PageNavigation</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-07-11T10:25:34.088387" level="WARN">Error in file 'C:\Users\Invcuser_71\Desktop\Python_Maghavitta_automation\NidhiFinder_sanity\Pages\check_EMI_Calculator.robot' on line 80: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-07-11T10:25:47.620679" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6772a6f75+76917]
+	GetHandleVerifier [0x0x7ff6772a6fd0+77008]
+	(No symbol) [0x0x7ff677059c1c]
+	(No symbol) [0x0x7ff6770a055f]
+	(No symbol) [0x0x7ff6770d8332]
+	(No symbol) [0x0x7ff6770d2e53]
+	(No symbol) [0x0x7ff6770d1f19]
+	(No symbol) [0x0x7ff677024b05]
+	GetHandleVerifier [0x0x7ff67757d2ad+3051437]
+	GetHandleVerifier [0x0x7ff677577903+3028483]
+	GetHandleVerifier [0x0x7ff67759589d+3151261]
+	GetHandleVerifier [0x0x7ff6772c183e+185662]
+	GetHandleVerifier [0x0x7ff6772c96ff+218111]
+	(No symbol) [0x0x7ff677023b00]
+	GetHandleVerifier [0x0x7ff677695f18+4201496]
+	BaseThreadInitThunk [0x0x7ffb8cb0e8d7+23]
+	RtlUserThreadStart [0x0x7ffb8d8fc34c+44]
+</msg>
+</errors>
+</robot>
